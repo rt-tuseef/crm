@@ -49,10 +49,14 @@
 
 <div class="p_login">
 
-	<div class="p_login_top">
+	<!--<div class="p_login_top">`
 		
 		<a title="SuiteCRM" href="https://www.suitecrm.com">SuiteCRM</a>
 		
+	</div>-->
+	<div class="login-left">
+		<h1>Hello World.</h1>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 	</div>
     
     <div class="p_login_middle">
@@ -107,13 +111,23 @@
                        id="username_password" name="username_password" value='{$LOGIN_PASSWORD}' autocomplete="off">
             </div>
             <br>
-            <input id="bigbutton" class="btn btn-lg btn-primary btn-block" type="submit"
-                   title="{sugar_translate module="Users" label="LBL_LOGIN_BUTTON_TITLE"}" tabindex="3" name="Login"
-                   value="{sugar_translate module="Users" label="LBL_LOGIN_BUTTON_LABEL"}">
-            <div id="forgotpasslink" style="cursor: pointer; display:{$DISPLAY_FORGOT_PASSWORD_FEATURE};"
+<div class="wrapper-checkbox">
+<div class="form-group" style="display: inline-block;">
+<input type="checkbox" id="html">
+<label for="html">Remember me</label>
+</div>
+<div id="forgotpasslink" style="cursor: pointer; display:{$DISPLAY_FORGOT_PASSWORD_FEATURE};"
                  onclick='toggleDisplay("forgot_password_dialog");'>
                 <a href='javascript:void(0)'>{sugar_translate module="Users" label="LBL_LOGIN_FORGOT_PASSWORD"}</a>
             </div>
+</div>
+            <input id="bigbutton" class="btn btn-lg btn-primary btn-block" type="submit"
+                   title="{sugar_translate module="Users" label="LBL_LOGIN_BUTTON_TITLE"}" tabindex="3" name="Login"
+                   value="{sugar_translate module="Users" label="LBL_LOGIN_BUTTON_LABEL"}">
+            <!--<div id="forgotpasslink" style="cursor: pointer; display:{$DISPLAY_FORGOT_PASSWORD_FEATURE};"
+                 onclick='toggleDisplay("forgot_password_dialog");'>
+                <a href='javascript:void(0)'>{sugar_translate module="Users" label="LBL_LOGIN_FORGOT_PASSWORD"}</a>
+            </div>-->
         </form>
         
         <form class="form-signin passform" role="form" action="index.php" method="post" name="DetailView" id="form" name="fp_form" id="fp_form" autocomplete="off">
@@ -146,7 +160,7 @@
     </div>
     </div>
     
-    <div class="p_login_bottom">
+    <div class="p_login_bottom" style="position:sticky">
 
     		<a id="admin_options">&copy; Supercharged by SuiteCRM</a>
             <a id="powered_by">&copy; Powered By SugarCRM</a>
