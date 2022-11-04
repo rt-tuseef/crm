@@ -1,0 +1,217 @@
+<style type="text/css">
+
+.p_login .p_login_top {
+  display: none;
+}
+
+.p_login .login-left {
+  float: left;
+  width: 70%;
+  background: #8e93fb;
+  height: 100%;
+  padding: 30px;
+}
+.p_login .login-left h1 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 10vmax;
+  line-height: 1;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: 'open sans',sans-serif;
+}
+.p_login .login-left p {
+  color: #fff;
+  font-size: 18px;
+  margin: 1em 0;
+}
+div.p_login .p_login_middle {
+  background-color: #fff;
+  float: left;
+  width: 30%;
+  padding: 5% 20px 0px 20px;
+  height: 100%;
+}
+.p_login .login-language-chooser {
+  text-align: center;
+  /*background: #f5f5f5;*/
+  padding: 30px 0px;
+  border-radius: 5px;
+  margin-bottom: 80px;
+}
+
+.p_login .companylogo {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.p_login .companylogo img {
+  width: 30%;
+  padding-top: 15px;
+}
+.p_login .input-group > input {
+  background-image: none !important;
+  border-bottom: 1px solid #ccc !important;
+  padding-left: 15px !important;
+}
+.p_login .btn.btn-block {
+  /*width: 25%;*/
+	width: auto;
+	float: right;
+	border-radius: 20px !important;
+	background-image: linear-gradient(135deg, #70F570 10%, #49C628 100%);
+	box-shadow: 0px 4px 20px 0px #49c628a6;
+	padding:0 15px !important;
+ /* background-image: linear-gradient(to right, #7eff7c, #7de57b);
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;*/
+}
+.p_login .btn.btn-block:focus,
+.p_login .btn.btn-block:active {
+  outline: none;
+  border: none;
+}
+.p_login #forgotpasslink a,
+.p_login #forgotpasslink a:hover {
+  color: #545f68;
+}
+.wrapper-checkbox {
+  clear: both;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+}
+.wrapper-checkbox .form-group {
+  margin-bottom: 0px;
+}
+.wrapper-checkbox .form-group label {
+  margin-left: 5px;
+  margin-bottom: 0px;
+}
+
+.wrapper-checkbox .form-group input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.wrapper-checkbox .form-group label {
+  position: relative;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.wrapper-checkbox .form-group label:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #7eff7c;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.wrapper-checkbox .form-group input:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #7eff7c;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .p_login .login-left {
+    width: 60% !important;
+  }
+  .p_login .p_login_middle {
+    padding: 5% 20px 0px 20px !important;
+    width: 40% !important;
+  }
+  .p_login .btn.btn-block {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 767px) {
+  div.p_login{
+    height: 100%; 
+
+    height: auto;
+  }
+  .p_login .login-left {
+    width: 100% !important;
+    height: auto !important;
+    padding-bottom: 50px;
+  }
+  div.p_login .p_login_middle {
+    width: 100% !important;
+    height: 100% !important;
+    float: none;
+  }
+  .p_login .companylogo img {
+    padding-top: 15px;
+  }
+
+  .p_login .p_login_bottom {
+    position: static !important;
+  }
+  .p_login .btn.btn-block {
+    width: 35%;
+   }
+}
+.p_login{
+  max-width: 80%;
+  margin: 8px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.p_login{
+  box-shadow: 0 0 20px 6px #090b6f85;
+	display: flex;
+	flex-wrap: wrap;
+	background: #fff;
+	position: relative;
+	height: initial !important;
+	min-height: calc(100vh - 20px);
+}
+body{
+	height: initial;
+	min-height: 100vh;
+  background-attachment: fixed;
+  background-image: linear-gradient(135deg,#FAB2FF 10%,#1904E5 100%);
+}
+
+.login-left,
+.p_login_middle{
+	flex-grow: 1;
+	min-height: 100%;
+	height: initial !important;
+}
+.p_login_bottom{
+    float: none;
+    flex-grow: 0;
+    left: initial;
+    flex-shrink: 1;
+    max-height: 50px;
+	position: absolute !important;
+}
+
+.error {
+    background: #70F570 !important;
+}
+@media(min-width: 768px){
+	.p_login{ padding-bottom: 50px; }
+}
+</style>
