@@ -43,7 +43,13 @@ array (
           'newTab' => false,
           'panelDefault' => 'expanded',
         ),
+        'LBL_EDITVIEW_PANEL1' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
       ),
+      'syncDetailEditViews' => true,
     ),
     'panels' => 
     array (
@@ -181,10 +187,160 @@ array (
         array (
           0 => 
           array (
+            'name' => 'type_of_contact',
+            'studio' => true,
+            'label' => 'LBL_TYPE_OF_CONTACT',
+          ),
+          1 => 
+          array (
+            'name' => 'regions',
+            'studio' => 'visible',
+            'label' => 'LBL_REGIONS',
+          ),
+        ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'quote_type',
+            'studio' => true,
+            'label' => 'LBL_QUOTE_TYPE',
+          ),
+          1 => 
+          array (
+            'name' => 'request_the_free_guide',
+            'studio' => true,
+            'label' => 'LBL_REQUEST_THE_FREE_GUIDE',
+          ),
+        ),
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'service_interest',
+            'studio' => true,
+            'label' => 'LBL_SERVICE_INTREST',
+          ),
+        ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'facebook',
+            'studio' => 'visible',
+            'label' => 'LBL_FACEBOOK',
+          ),
+          1 => 
+          array (
+            'name' => 'linkdien',
+            'studio' => 'visible',
+            'label' => 'LBL_LINKDIEN',
+          ),
+        ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'services_required',
+            'studio' => true,
+            'label' => 'LBL_SERVICE_REQUIRED',
+          ),
+          1 => 
+          array (
+            'name' => 'other_services',
+            'studio' => true,
+            'label' => 'LBL_OTHER_SERVICES',
+          ),
+        ),
+        6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'message',
+            'studio' => 'visible',
+            'label' => 'LBL_MESSAGE',
+          ),
+        ),
+        7 => 
+        array (
+          0 => 
+          array (
             'name' => 'report_to_name',
             'label' => 'LBL_REPORTS_TO',
           ),
           1 => 'campaign_name',
+        ),
+      ),
+      'lbl_editview_panel1' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            'name' => 'appointment_explain_service',
+            'studio' => true,
+            'label' => 'LBL_APPOINTMENT_EXPLAIN_SERVICE',
+          ),
+          1 => 
+          array (
+            'name' => 'punctuality',
+            'studio' => true,
+            'label' => 'LBL_PUNCTUALITY',
+          ),
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            'name' => 'attitude_during_work',
+            'studio' => true,
+            'label' => 'LBL_ATTITUDE_DURING_WORK',
+          ),
+          1 => 
+          array (
+            'name' => 'report_followup',
+            'studio' => true,
+            'label' => 'LBL_REPORT_FOLLOWUP',
+          ),
+        ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'level_of_satisfaction',
+            'studio' => true,
+            'label' => 'LBL_LEVEL_OF_SATISFACTION',
+          ),
+          1 => 
+          array (
+            'name' => 'can_be_improved',
+            'studio' => true,
+            'label' => 'LBL_CAN_BE_IMPROVED',
+          ),
+        ),
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'recommendation',
+            'studio' => true,
+            'label' => 'LBL_RECOMMENDATION',
+          ),
+          1 => 
+          array (
+            'name' => 'hear_about_us',
+            'studio' => true,
+            'label' => 'LBL_HEAR_ABOUT_US',
+          ),
+        ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'suggestions',
+            'studio' => 'visible',
+            'label' => 'LBL_SUGGESTIONS',
+          ),
         ),
       ),
     ),
