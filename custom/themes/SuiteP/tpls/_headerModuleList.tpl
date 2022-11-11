@@ -51,6 +51,19 @@
                 $(this).siblings('.nested-dropdown-menu').toggle();
                 $(this).toggleClass("minus-icon");
             })
+            $(".more-label").click(function(event) {
+                event.stopPropagation();
+                $(".navbar-header").addClass("open") 
+                $(this).siblings('.nested-dropdown-menu').toggle();
+                $(".more-selector").toggleClass("minus-icon");
+            })
+            $(".group-label").click(function(event) {
+                event.stopPropagation();
+                $(".navbar-header").addClass("open") 
+                $(this).siblings('.nested-dropdown-menu').toggle();
+                $(this).parent().children('span').eq(1).toggleClass("minus-icon");
+            })
+            
         });
     </script>
 {/literal}
@@ -76,11 +89,11 @@
                     {foreach from=$moduleTopMenu item=module key=name name=moduleList}
                         {if $name == $MODULE_TAB}
                             {if $name != 'Home'}
-                                <li class="topnav">
+                                <li class="topnav dropdown-icon">
                                     <span class="currentTabLeft">&nbsp;</span>
                                     <span class="currentTab">{sugar_link id="moduleTab_$name" module=$name data=$module}</span>
                                     <span>&nbsp;</span>
-
+                                    <span class="open-close-icon"></span>
                                     {* check, is there any recent items *}
                                     {assign var=foundRecents value=false}
 
@@ -99,7 +112,7 @@
                                     {/foreach}
 
                                     {if $foundRecents || $foundFavorits || (is_array($shortcutTopMenu.$name) && count($shortcutTopMenu.$name) > 0)}
-                                        <ul class="dropdown-menu" role="menu">
+                                        <ul class="nested-dropdown-menu" role="menu">
                                             <li class="current-module-action-links">
                                                 <ul>
                                                     {if is_array($shortcutTopMenu.$name) && count($shortcutTopMenu.$name) > 0}
@@ -107,13 +120,13 @@
                                                             {if $item.URL == "-"}
                                                                 {*<li><a></a><span>&nbsp;</span></li>*}
                                                             {else}
-                                                                <li>
-                                                                    <a href="{$item.URL}">
+                                                                <li class="topnav without-actions">
+                                                                    
                                                                         <span class="topnav-fake-icon">
                                                                             {* fakes the space the icon takes *}
                                                                         </span>
-                                                                        <span aria-hidden="true">{$item.LABEL}</span>
-                                                                    </a>
+                                                                        <span aria-hidden="true"><a href="{$item.URL}">{$item.LABEL} </a></span>
+                                                                   
                                                                 </li>
                                                             {/if}
                                                         {/foreach}
@@ -202,14 +215,14 @@
 
                     {foreach from=$groupTabs item=modules key=group name=groupList}
                         {capture name=extraparams assign=extraparams}parentTab={$group}{/capture}
-                        <li class="topnav {if $smarty.foreach.groupList.last}all{/if}">
+                        <li class="topnav dropdown-icon {if $smarty.foreach.groupList.last}all{/if}">
                             
-                            <span class="notCurrentTab">
+                            <span id= "group" class="notCurrentTab group-label">
                                 <a href="#" id="grouptab_{$smarty.foreach.groupList.index}" class="dropdown-toggle grouptab">{$group}</a>
                             </span>
-                            
+                            <span class="open-close-icon group-selector"></span>
 
-                            <ul class="dropdown-menu" role="menu" {if $smarty.foreach.groupList.last} class="All" {/if}>
+                            <ul class="nested-dropdown-menu" role="menu" {if $smarty.foreach.groupList.last} class="All" {/if}>
                                 {foreach from=$modules.modules item=module key=modulekey}
                                     <li>
                                         {capture name=moduleTabId assign=moduleTabId}moduleTab_{$smarty.foreach.moduleList.index}_{$module}{/capture}
@@ -277,11 +290,11 @@
                                                     {if $item.URL == "-"}
                                                         {*<li><a></a><span>&nbsp;</span></li>*}
                                                     {else}
-                                                        <li>
-                                                            <a href="{$item.URL}">
+                                                        <li class="topnav without-actions">
+                                                            
                                                                 <span class="topnav-fake-icon">{* fakes the space the icon takes *}</span>
-                                                                <span aria-hidden="true">{$item.LABEL}</span>
-                                                            </a>
+                                                                <span aria-hidden="true"><a href="{$item.URL}">{$item.LABEL}</a></span>
+                                                            
                                                         </li>
                                                     {/if}
                                                 {/foreach}
@@ -370,9 +383,9 @@
                     {/foreach}
 
                     {if count($moduleExtraMenu) > 0}
-                        <li class="topnav">
-                            <span class="dropdown-toggle headerlinks notCurrentTab"><a href="#">{$APP.LBL_MORE}</a></span>
-
+                        <li class="topnav with-actions dropdown-icon">
+                            <span class="dropdown-toggle headerlinks notCurrentTab more-label"><a href="#">{$APP.LBL_MORE}</a></span>
+                             <span class="open-close-icon more-selector"></span>
                             <ul class="nested-dropdown-menu" role="menu">
                                 <!--nav items without actions -->
                                 {foreach from=$modules.extra item=submodulename key=submodule}
@@ -882,3 +895,4 @@
     <!--End Responsive Sidebar -->
 {/if}
 <!--Start Page content -->
+

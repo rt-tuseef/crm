@@ -116,3 +116,35 @@ body .dropdown-menu.mobile_menu .topnav.with-actions:hover > .dropdown-toggle a 
 .paginationActionButtons #select_actions_disabled_top .parent-dropdown-handler label{
     color:white;
 }
+
+.nested-dropdown-menu > li:hover > a,
+.topnav:hover > span > a{ color: #fff !important; }
+.topnav:hover{ background-color: transparent; }
+.topnav > span { width: 100%;}
+.nested-dropdown-menu > li > a,
+.topnav > span > a { border-bottom: 1px solid #757083 !important; }
+#mobile_menu.dropdown-menu.mobile_menu{ max-height: calc(100vh - 61px) !important }
+#mobile_menu.dropdown-menu.mobile_menu a {
+    background-color: #25364a;
+    color: #4f749f;
+    padding: 7px 10px 7px 0px;
+    margin: 0;
+    letter-spacing: 0;
+    text-decoration: none;
+    text-transform: none;
+    width: 100%;
+}
+
+.recentlinks .recent-links-detail:hover > span{
+    color: #fff
+}
+
+.recentlinks .recent-links-edit:hover > span {
+    color: #fff
+}
+
+.recentlinks{ border-bottom: 1px solid #757083 !important;  }
+.recentlinks > a{ border-bottom: none !important;  }
+.recentlinks:hover > a{color: #fff !important;}
+.recentlinks > a.recent-links-detail{ display: inline-block !important; width: auto !important; }
+.recentlinks > a.recent-links-edit{display: inline-block !important;width: auto !important;float: right;}
